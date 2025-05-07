@@ -12,8 +12,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vehicles', function (Blueprint $table) {
-            $table->integer('id', true); 
-            $table->integer('user_id');
+            $table->id();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('license_plate');
             $table->string('type');
             $table->string('brand');
