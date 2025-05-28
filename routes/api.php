@@ -19,5 +19,6 @@ Route::group(['prefix' => 'panel-control', 'middleware' => ['auth:sanctum']], fu
     Route::get('/vehicles/{id}', [VehicleController::class, 'show']);
     Route::put('/vehicles/{id}', [VehicleController::class, 'update']);
     Route::delete('/vehicles/{id}', [VehicleController::class, 'destroy']);
+
 });
 

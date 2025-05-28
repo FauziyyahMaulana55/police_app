@@ -80,7 +80,7 @@ class AuthController extends Controller
                 'user'  => $user,
                 'token' => $token
             ],
-        ], 200);
+        ], 200)->withCookie(cookie('token', $token, 60, null, null, true, false));
     }
 
     public function logout(Request $request)
@@ -101,5 +101,15 @@ class AuthController extends Controller
             'message'   => 'Data user ditemukan',
             'data'      => $request->user(),
         ], 200);
+    }
+
+    public function index()
+    {
+        return view('login');
+    }
+
+    public function registerPage()
+    {
+        return view('register');
     }
 }
