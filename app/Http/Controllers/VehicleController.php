@@ -105,7 +105,7 @@ class VehicleController extends Controller
         if (!$vehicle) {
             return response()->json([
                 'status'  => 'failed',
-                'message' => 'Kendaraan tidak ditemukan',
+                'message' => "Berhasil memperbarui kendaraan",
                 'data'    => []
             ], 404);
         }
