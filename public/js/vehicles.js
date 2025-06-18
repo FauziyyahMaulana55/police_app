@@ -14,6 +14,12 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
         fetchVehicles();
     });
 
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
     async function fetchVehicles() {
         try {
             const rawToken = getCookie('token');
@@ -48,14 +54,12 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
         const isStolenInput = vehicleForm.querySelector('input[name="is_stolen"]:checked');
         const isStolen = isStolenInput ? isStolenInput.value : null;
 
-        // Error elements
         const licensePlateError = vehicleForm.querySelector('#license_plateError');
         const typeError = vehicleForm.querySelector('#typeError');
         const brandError = vehicleForm.querySelector('#brandError');
         const colorError = vehicleForm.querySelector('#colorError');
         const isStolenError = vehicleForm.querySelector('#is_stolenError');
 
-        // Reset error messages
         if (licensePlateError) licensePlateError.textContent = "";
         if (typeError) typeError.textContent = "";
         if (brandError) brandError.textContent = "";
@@ -309,4 +313,8 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
             showErrorToast(errorMessage);
         }
     }
+
+    // ✅ Ekspor fungsi ke global supaya bisa dipanggil dari tombol HTML
+    window.confirmDeleteVehicle = confirmDeleteVehicle;
+    window.showEditVehicleModal = showEditVehicleModal;
 }
