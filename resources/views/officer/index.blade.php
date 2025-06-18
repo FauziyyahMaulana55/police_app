@@ -41,7 +41,7 @@
                 <div class="modal-body">
                     <form id="officerForm">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nama</label>
+                            <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" name="name">
                             <small id="nameError" class="text-danger"></small>
                         </div>
@@ -56,7 +56,7 @@
                             <small id="rankError" class="text-danger"></small>
                         </div>
                         <div class="mb-3">
-                            <label for="assigned_area" class="form-label">Area Penugasan</label>
+                            <label for="assigned_area" class="form-label">Assigned Area</label>
                             <input type="text" class="form-control" id="assigned_area" name="assigned_area">
                             <small id="assigned_areaError" class="text-danger"></small>
                         </div>
@@ -82,7 +82,7 @@
                     <form id="editOfficerForm">
                         <input type="hidden" id="editOfficerId" name="officer_id">
                         <div class="mb-3">
-                            <label for="editName" class="form-label">Nama</label>
+                            <label for="editName" class="form-label">Name</label>
                             <input type="text" class="form-control" id="editName" name="name">
                             <small id="editNameError" class="text-danger"></small>
                         </div>
@@ -97,7 +97,7 @@
                             <small id="editRankError" class="text-danger"></small>
                         </div>
                         <div class="mb-3">
-                            <label for="editAssignedArea" class="form-label">Area Penugasan</label>
+                            <label for="editAssignedArea" class="form-label">Assigned Area</label>
                             <input type="text" class="form-control" id="editAssignedArea" name="assigned_area">
                             <small id="editAssignedAreaError" class="text-danger"></small>
                         </div>
