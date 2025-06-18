@@ -155,23 +155,26 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
         window.vehicleData = data;
 
         data.forEach((item, index) => {
+            const isStolen = parseInt(item.is_stolen) === 1;
+
             const row = document.createElement('tr');
             row.innerHTML = `
-                <th scope="row">${index + 1}</th>
-                <td>${item.license_plate}</td>
-                <td>${item.type}</td>
-                <td>${item.brand}</td>
-                <td>${item.color}</td>
-                <td><span style="color: ${item.is_stolen ? 'red' : 'green'};">
-                        ${item.is_stolen ? 'Dicuri' : 'Aman'}
-                    </span></td>
-                <td>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editVehicleModal" onclick="showEditVehicleModal(${item.id}, ${index})">Edit</button>
-                    <button type="button" class="btn btn-danger" onclick="confirmDeleteVehicle(${item.id})">Hapus</button>
-                </td>
-            `;
+        <th scope="row">${index + 1}</th>
+        <td>${item.license_plate}</td>
+        <td>${item.type}</td>
+        <td>${item.brand}</td>
+        <td>${item.color}</td>
+        <td><span style="color: ${isStolen ? 'red' : 'green'};">
+                ${isStolen ? 'Dicuri' : 'Aman'}
+            </span></td>
+        <td>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editVehicleModal" onclick="showEditVehicleModal(${item.id}, ${index})">Edit</button>
+            <button type="button" class="btn btn-danger" onclick="confirmDeleteVehicle(${item.id})">Hapus</button>
+        </td>
+    `;
             tableBody.appendChild(row);
         });
+
 
         $('#vehiclesTable').DataTable({
             responsive: true,
@@ -314,7 +317,6 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
         }
     }
 
-    // ✅ Ekspor fungsi ke global supaya bisa dipanggil dari tombol HTML
     window.confirmDeleteVehicle = confirmDeleteVehicle;
     window.showEditVehicleModal = showEditVehicleModal;
 }
