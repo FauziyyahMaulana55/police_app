@@ -158,10 +158,11 @@ if (window.location.pathname.includes('/panel-control/vehicles')) {
                 <td>${item.type}</td>
                 <td>${item.brand}</td>
                 <td>${item.color}</td>
-                <td><span style="color: ${item.is_stolen ? 'red' : 'green'};">
-                        ${item.is_stolen ? 'Dicuri' : 'Aman'}
-                    </span></td>
                 <td>
+  <span style="color: ${Number(item.is_stolen) === 1 ? 'red' : 'green'};">
+    ${Number(item.is_stolen) === 1 ? 'Dicuri' : 'Aman'}
+  </span>
+</td>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editVehicleModal" onclick="showEditVehicleModal(${item.id}, ${index})">Edit</button>
                     <button type="button" class="btn btn-danger" onclick="confirmDeleteVehicle(${item.id})">Hapus</button>
                 </td>
