@@ -15,15 +15,15 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Name</th>
                             <th>Badge Number</th>
                             <th>Rank</th>
-                            <th>Area Penugasan</th>
+                            <th>Assigned Area</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody id="officerTableBody">
-                        <!-- Data akan di-load dengan JavaScript -->
+
                     </tbody>
                 </table>
             </div>
