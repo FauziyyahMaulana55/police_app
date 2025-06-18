@@ -42,9 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    
+
     public function vehicles()
     {
         return $this->hasMany(Vehicle::class);  // Menghubungkan ke model Vehicle
+    }
+    public function officers()
+    {
+        return $this->hasMany(Officer::class);
     }
 }
