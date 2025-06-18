@@ -189,8 +189,12 @@ if (window.location.pathname.includes('/panel-control/officers')) {
             confirmButtonText: 'Ya, hapus',
             cancelButtonText: 'Batal'
         });
-        if (res.isConfirmed) deleteOfficer(id);
+
+        if (res.isConfirmed) {
+            deleteOfficer(id);
+        }
     }
+
 
     async function deleteOfficer(id) {
         try {

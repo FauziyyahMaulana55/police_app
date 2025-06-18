@@ -7,7 +7,31 @@
     <title>Police App</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
-    <link href="https://cdn.datatables.net/v/bs5/dt-2.3.1/r-3.0.4/sp-2.3.3/datatables.min.css" rel="stylesheet" integrity="sha384-J++hDZeIfhhNo3Fx9z+iz3nlKVoEkdyepyWQ2wcd2CqzaH52SVvaDmYGNFTvhs1X" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/v/bs5/dt-2.3.1/r-3.0.4/sp-2.3.3/datatables.min.css" rel="stylesheet"
+        integrity="sha384-J++hDZeIfhhNo3Fx9z+iz3nlKVoEkdyepyWQ2wcd2CqzaH52SVvaDmYGNFTvhs1X" crossorigin="anonymous">
+    <style>
+        .swal2-cancel {
+            color: #fff !important;
+            background-color: #dc3545 !important;
+            border: none !important;
+        }
+
+        .swal2-cancel:hover {
+            background-color: #c82333 !important;
+        }
+
+        .swal2-confirm {
+            color: #fff !important;
+            background-color: #0d6efd !important;
+            /* warna biru Bootstrap */
+            border: none !important;
+        }
+
+        .swal2-confirm:hover {
+            background-color: #0b5ed7 !important;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -48,7 +72,9 @@
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 
-    <script src="https://cdn.datatables.net/v/bs5/dt-2.3.1/r-3.0.4/sp-2.3.3/datatables.min.js" integrity="sha384-r2UURpTxS/+GTcTXnTpM3dnRtw1ICQ4yd30beiXjs2I35hy8lmoLW0X6Rs13xFUy" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.3.1/r-3.0.4/sp-2.3.3/datatables.min.js"
+        integrity="sha384-r2UURpTxS/+GTcTXnTpM3dnRtw1ICQ4yd30beiXjs2I35hy8lmoLW0X6Rs13xFUy" crossorigin="anonymous">
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -56,8 +82,8 @@
 
     <script src="{{ asset('js/utils.js') }}"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
-    <script src="{{ asset('js/vehicles.js')}}"></script>
-    <script src="{{ asset('js/officer.js')}}"></script>
+    <script src="{{ asset('js/vehicles.js') }}"></script>
+    <script src="{{ asset('js/officer.js') }}"></script>
 
 </body>
 
